@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
--- Host: localhost    Database: optica
+-- Host: localhost    Database: db_autolavado
 -- ------------------------------------------------------
 -- Server version	8.0.42
 
@@ -16,30 +16,27 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `inventario`
+-- Table structure for table `tbi_roles`
 --
 
-DROP TABLE IF EXISTS `inventario`;
+DROP TABLE IF EXISTS `tbi_roles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `inventario` (
-  `id_inventario` int NOT NULL AUTO_INCREMENT COMMENT 'Identificador único y secuencial del inventario.',
-  `id_producto` int NOT NULL COMMENT 'Identificador del producto vendido.',
-  `cantidad` int NOT NULL COMMENT 'Cantidad de unidades del producto vendido.',
-  PRIMARY KEY (`id_inventario`),
-  KEY `id_producto` (`id_producto`),
-  CONSTRAINT `inventario_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `tbi_roles` (
+  `idRol` int NOT NULL AUTO_INCREMENT,
+  `nombreRol` varchar(45) NOT NULL,
+  PRIMARY KEY (`idRol`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `inventario`
+-- Dumping data for table `tbi_roles`
 --
 
-LOCK TABLES `inventario` WRITE;
-/*!40000 ALTER TABLE `inventario` DISABLE KEYS */;
-INSERT INTO `inventario` VALUES (1,1,20),(2,2,15),(3,3,50),(4,4,100);
-/*!40000 ALTER TABLE `inventario` ENABLE KEYS */;
+LOCK TABLES `tbi_roles` WRITE;
+/*!40000 ALTER TABLE `tbi_roles` DISABLE KEYS */;
+INSERT INTO `tbi_roles` VALUES (1,'Administrador'),(2,'Cajero'),(3,'Obrero'),(4,'asfafa'),(5,'Barrendero'),(6,'foquero'),(7,'fregador'),(8,'comer'),(9,'comer'),(10,'minero');
+/*!40000 ALTER TABLE `tbi_roles` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -51,4 +48,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-08-18 16:05:26
+-- Dump completed on 2025-08-18 16:17:11

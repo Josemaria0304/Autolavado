@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
--- Host: localhost    Database: optica
+-- Host: localhost    Database: db_autolavado
 -- ------------------------------------------------------
 -- Server version	8.0.42
 
@@ -16,33 +16,35 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `usuario`
+-- Table structure for table `tbc_vehiculo`
 --
 
-DROP TABLE IF EXISTS `usuario`;
+DROP TABLE IF EXISTS `tbc_vehiculo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `usuario` (
-  `id_usuario` int NOT NULL AUTO_INCREMENT COMMENT 'Identificador único y secuencial de cada usuario registrado en el sistema.',
-  `nombre` varchar(100) NOT NULL COMMENT 'Nombre o identificativo del usuario registrado en el sistema.',
-  `correo` varchar(100) NOT NULL COMMENT 'Dirección de correo electrónico asociada al usuario, utilizada para la identificación, autenticación y comunicación oficial dentro del sistema.',
-  `contraseña` varchar(100) NOT NULL COMMENT 'Contraseña cifrada asociada al usuario, utilizada para la autenticación y verificación de identidad dentro del sistema.',
-  `id_rol` int NOT NULL COMMENT 'Identificador único y secuencial de cada rol dentro del sistema.',
-  PRIMARY KEY (`id_usuario`),
-  UNIQUE KEY `correo` (`correo`),
-  KEY `id_rol` (`id_rol`),
-  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_rol`) REFERENCES `rol` (`id_rol`)
+CREATE TABLE `tbc_vehiculo` (
+  `idVehiculo` int NOT NULL AUTO_INCREMENT,
+  `matricula` varchar(15) NOT NULL,
+  `marca` varchar(45) NOT NULL,
+  `modelo` varchar(45) NOT NULL,
+  `color` varchar(45) NOT NULL,
+  `year` year NOT NULL,
+  `idCliente` int NOT NULL,
+  `tipo` varchar(45) NOT NULL,
+  PRIMARY KEY (`idVehiculo`),
+  KEY `fk_clientes_idx` (`idCliente`),
+  CONSTRAINT `fk_clientes` FOREIGN KEY (`idCliente`) REFERENCES `tbi_clientes` (`idCliente`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `usuario`
+-- Dumping data for table `tbc_vehiculo`
 --
 
-LOCK TABLES `usuario` WRITE;
-/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
-INSERT INTO `usuario` VALUES (1,'Ana Pérez','ana@optica.com','admin123',1),(2,'Luis Torres','luis@optica.com','vend123',2),(3,'Carlos Gómez','carlos@gmail.com','cliente123',3);
-/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+LOCK TABLES `tbc_vehiculo` WRITE;
+/*!40000 ALTER TABLE `tbc_vehiculo` DISABLE KEYS */;
+INSERT INTO `tbc_vehiculo` VALUES (2,'240628','modelo','dad','rojo',2000,1,'Familiar'),(3,'890012','modelo','ferrari','rojo',2000,1,'Familiar');
+/*!40000 ALTER TABLE `tbc_vehiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -54,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-08-18 16:05:26
+-- Dump completed on 2025-08-18 16:17:11

@@ -1,6 +1,6 @@
 -- MySQL dump 10.13  Distrib 8.0.42, for Win64 (x86_64)
 --
--- Host: localhost    Database: optica
+-- Host: localhost    Database: db_autolavado
 -- ------------------------------------------------------
 -- Server version	8.0.42
 
@@ -16,27 +16,33 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `rol`
+-- Table structure for table `tbi_clientes`
 --
 
-DROP TABLE IF EXISTS `rol`;
+DROP TABLE IF EXISTS `tbi_clientes`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `rol` (
-  `id_rol` int NOT NULL AUTO_INCREMENT COMMENT 'Identificador único y secuencial de cada rol dentro del sistema.',
-  `nombre_rol` varchar(50) NOT NULL COMMENT 'Nombre descriptivo del rol que define el tipo de acceso o funcionalidad asignada dentro del sistema.',
-  PRIMARY KEY (`id_rol`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `tbi_clientes` (
+  `idCliente` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(45) NOT NULL,
+  `primerApellido` varchar(45) NOT NULL,
+  `segundoApellido` varchar(45) DEFAULT NULL,
+  `direccion` varchar(100) NOT NULL,
+  `telefono` varchar(12) NOT NULL,
+  `correo` varchar(65) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`idCliente`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `rol`
+-- Dumping data for table `tbi_clientes`
 --
 
-LOCK TABLES `rol` WRITE;
-/*!40000 ALTER TABLE `rol` DISABLE KEYS */;
-INSERT INTO `rol` VALUES (1,'Administrador'),(2,'Vendedor'),(3,'Cliente');
-/*!40000 ALTER TABLE `rol` ENABLE KEYS */;
+LOCK TABLES `tbi_clientes` WRITE;
+/*!40000 ALTER TABLE `tbi_clientes` DISABLE KEYS */;
+INSERT INTO `tbi_clientes` VALUES (1,'Jose','Castillo','Aparicio','5 de mayo','7641111404','lucasofelia5@gmail.com','jmca2018');
+/*!40000 ALTER TABLE `tbi_clientes` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -48,4 +54,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-08-18 16:05:26
+-- Dump completed on 2025-08-18 16:17:10
