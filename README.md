@@ -13,7 +13,8 @@ El objetivo principal es gestionar de forma eficiente la información relacionad
    - `tbc_venta_servicios`  
    - `tbc_usuarios`  
    - `tbi_roles`  
-   - `tbi_servicios`  
+   - `tbi_servicios`
+5. Base de Datos Integrada
 
 El sistema busca optimizar los procesos internos del autolavado, permitiendo un registro ordenado de las transacciones realizadas, facilitando la atención al cliente y mejorando la toma de decisiones mediante un control centralizado de los datos.  
 
@@ -38,3 +39,9 @@ Desarrollar un sistema integral de gestión para un **autolavado**, que permita 
 - tbi_servicios
 - 
 Este diseño permite administrar **clientes, vehículos, servicios, ventas y usuarios** de manera integrada, garantizando un control eficiente del autolavado.
+
+### Base de Datos Integrada
+- Almacenamiento seguro de toda la información del negocio
+- Respaldo y recuperación de datos
+- Consultas optimizadas para acceso rápido a la información
+- Sistema de usuarios y permisos para acceso controlado
