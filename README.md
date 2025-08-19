@@ -4,18 +4,21 @@ Desarrollar un sistema integral de gestión para un **autolavado**, que permita 
 ---
 
 ## Características del Sistema de Autolavado
-- 📋 **Gestión de usuarios y roles**: Control de accesos mediante roles (administrador, empleado, cliente).  
-- 🛒 **Control de ventas**: Registro de ventas de productos y servicios con detalle de cada transacción.  
-- 🧴 **Inventario de productos**: Control en tiempo real de existencias, altas y bajas de productos.  
-- 🧾 **Detalle de servicios adquiridos**: Registro de los servicios solicitados por cada cliente.  
-- 📂 **Expediente de clientes**: Información básica y seguimiento del historial de cada cliente.  
-- 💰 **Control de precios**: Manejo de precios unitarios y totales en productos y servicios.  
-- 📊 **Reportes**: Generación de reportes de ventas, inventario y servicios adquiridos para análisis.  
-- 🔐 **Seguridad**: Acceso restringido mediante usuarios y contraseñas.  
+- **Gestión de usuarios y roles**: Control de accesos mediante roles (administrador, empleado, cliente).  
+- **Control de ventas**: Registro de ventas de productos y servicios con detalle de cada transacción.    
+- **Detalle de servicios adquiridos**: Registro de los servicios solicitados por cada cliente.  
+- **Expediente de clientes**: Información básica y seguimiento del historial de cada cliente.  
+- **Seguridad**: Acceso restringido mediante usuarios y contraseñas.  
 
-## 🗂 Tablas del Modelo
-
-## 🔗 Relaciones Principales
+##  Tablas del Modelo
+- ** Usuario
+- ** Producto
+- ** Venta
+- ** Detalleventa
+- ** Inventario
+- ** Rol
+- ** Servicio Adquirido
+## Relaciones Principales
 - **Usuario – Rol**: un usuario tiene un rol.  
 - **Venta – Usuario**: cada venta es realizada por un usuario.  
 - **Venta – DetalleVenta – Producto**: las ventas pueden incluir múltiples productos.  
