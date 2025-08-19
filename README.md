@@ -3,7 +3,7 @@ El presente proyecto consiste en el diseño y desarrollo de una **base de datos 
 El objetivo principal es gestionar de forma eficiente la información relacionada con **clientes, vehículos, servicios, usuarios, roles y ventas**, brindando un mejor control administrativo y operativo.  
 
 
-## 📑 Índice
+##  Índice
 1. Introducción  
 2. Objetivo General del Código  
 3. Características del Sistema de Autolavado  
