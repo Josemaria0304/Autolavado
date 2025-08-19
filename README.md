@@ -16,4 +16,5 @@ Desarrollar un sistema integral de gestión para un **autolavado**, que permita 
 - tbi_roles
 
 - tbi_servicios
+- 
 Este diseño permite administrar **clientes, vehículos, servicios, ventas y usuarios** de manera integrada, garantizando un control eficiente del autolavado.
