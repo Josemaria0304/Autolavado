@@ -1,4 +1,4 @@
-##AUTOLAVADO
+## AUTOLAVADO
 ## Introducción
 El presente proyecto consiste en el diseño y desarrollo de una **base de datos para un sistema de autolavado**.  
 El objetivo principal es gestionar de forma eficiente la información relacionada con **clientes, vehículos, servicios, usuarios, roles y ventas**, brindando un mejor control administrativo y operativo.  
