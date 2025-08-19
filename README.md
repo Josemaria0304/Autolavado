@@ -14,7 +14,6 @@ El objetivo principal es gestionar de forma eficiente la información relacionad
    - `tbc_usuarios`  
    - `tbi_roles`  
    - `tbi_servicios`  
-5. Conclusión
 
 El sistema busca optimizar los procesos internos del autolavado, permitiendo un registro ordenado de las transacciones realizadas, facilitando la atención al cliente y mejorando la toma de decisiones mediante un control centralizado de los datos.  
 
