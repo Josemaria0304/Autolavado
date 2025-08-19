@@ -5,9 +5,9 @@ Este proyecto contiene el modelo de base de datos para la gestión de **ventas d
 
 ## 🗂 Tablas del Modelo
 
-*Tablas relacionadas:
-Usuario – Rol: un usuario tiene un rol.
-Venta – Usuario: cada venta es realizada por un usuario.
-Venta – DetalleVenta – Producto: las ventas pueden incluir múltiples productos.
-Venta – ServicioAdquirido – Servicio: las ventas pueden incluir múltiples servicios.
-Producto – Inventario: cada producto se controla en inventa
+## 🔗 Relaciones Principales
+- **Usuario – Rol**: un usuario tiene un rol.  
+- **Venta – Usuario**: cada venta es realizada por un usuario.  
+- **Venta – DetalleVenta – Producto**: las ventas pueden incluir múltiples productos.  
+- **Venta – ServicioAdquirido – Servicio**: las ventas pueden incluir múltiples servicios.  
+- **Producto – Inventario**: cada producto se controla en inventario.  
