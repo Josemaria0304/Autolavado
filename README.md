@@ -9,9 +9,11 @@ Desarrollar un sistema integral de gestión para un **autolavado**, que permita 
 - **Seguridad**: Acceso restringido mediante usuarios y contraseñas.  
 
 ##  Tablas del Modelo
-- ** tbc_vehiculo
-- ** tbi-clientes
-- ** tbc_venta_servicios
-- ** tbc_usuario
-- ** tbi_roles
+- tbc_vehiculo
+- tbi-clientes
+- tbc_venta_servicios
+- tbc_usuario
+- tbi_roles
+
+- 
 Este diseño permite administrar **clientes, vehículos, servicios, ventas y usuarios** de manera integrada, garantizando un control eficiente del autolavado.
