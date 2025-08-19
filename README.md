@@ -1,9 +1,9 @@
-P## 🎯 Objetivo General
+## Objetivo General del codigo
 Desarrollar un sistema integral de gestión para un **autolavado**, que permita controlar de manera eficiente la administración de **ventas, servicios, productos, usuarios e inventario**, brindando una solución tecnológica que facilite la atención al cliente, optimice los procesos internos y mejore la toma de decisiones.
 
 ---
 
-## ✨ Características del Sistema de Autolavado
+## Características del Sistema de Autolavado
 - 📋 **Gestión de usuarios y roles**: Control de accesos mediante roles (administrador, empleado, cliente).  
 - 🛒 **Control de ventas**: Registro de ventas de productos y servicios con detalle de cada transacción.  
 - 🧴 **Inventario de productos**: Control en tiempo real de existencias, altas y bajas de productos.  
